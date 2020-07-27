@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   
+</head>
+<body>
+
+
+<!-header-!>
+<header>
+　<div class="header-back"><img src="img/bokujo-header.png"></div>
+</header>
+
+<nav>
+    <ul>
+    <li><a class=”current” href=”#”>Home</a></li>
+    <li><a href=”#”>News</a></li>
+    <li><a href=”#”>About</a></li>
+    <li><a href=”#”>Access</a></li>
+    <li><a href=”#”>Blog</a></li>
+    </ul>
+    </nav>
+
+
+
+    <div class="milk">
+    <img src="img/milk.png">
+    <div class="main-visual">
+        <img src="img/cowred.png">
+    </div>
+</div>
+
+<div class="middle-text">
+深いコクと口どけが魅力の無添加ソフト。<br>乳脂肪分の深い旨味と、<br>口の中にじんわり広がる優しい余韻を<br>楽しんでください。
+</div>
+
+
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+
+
+<div id="wrapper">
+   
+
+        
+      <div id="slider-wrap">
+          <ul id="slider">
+             <li data-color="#1abc9c">
+                <div>
+                    <h3>会津のべこの乳</h3><!--stuffname-->
+                    <span>180円</span><!--price-->
+                </div>                
+                <i class="image"><img src="img/bekonotiti.png"></i>
+             </li>
+             
+             <li data-color="#3498db">
+                <div>
+                    <h3>もうひと絞り</h3>
+                    <span>200円</span>
+                </div>
+                <i class="image"><img src="img/purin.png"></i>
+             </li>
+             
+             <li data-color="#9b59b6">
+                <div>
+                    <h3>つまんで良いチーズ</h3>
+                    <span>250円</span>
+                </div>
+                <i class="image"><img src="img/pan.png"></i>
+             </li>
+             
+             <li data-color="#34495e">
+                <div>
+                    <h3>会津の雪</h3>
+                    <span>220円</span>
+                </div>
+                <i class="image"><img src="img/aizunoyuki.png"></i>
+             </li>
+             
+             <li data-color="#e74c3c">
+                <div>
+                    <h3>ソフトクリーミィヨーグルト</h3>
+                    <span>130円</span>
+                </div>
+                <i class="image"><img src="img/ichigo.png"></i>
+             </li>
+             
+             
+          </ul>
+          
+           <!--controls-->
+          <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+          <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+          <div id="counter"></div>
+          
+          <div id="pagination-wrap">
+            <ul>
+            </ul>
+          </div>
+          <!--controls-->    
+                 
+      </div>
+  
+   </div>
+<!-- / slideshow -->
+
+<div class="button-container">
+    <a href="#" class="btn-border">商品一覧へ</a>
+    </div>
+
+<div class="secret">
+    <img src="img/secret-title.png">
+</div>
+
+
+<div class="vo7">
+  <img src="img/vo7.png">
+</div>
+
+<div class="news-title">
+    NEWS
+</div>
+
+
+<ul class="msr_newslist01">
+    <li>
+      <a href="#">
+      <div>
+        <time datetime="2016-1-1">2016.01.01</time>
+        <p class="cat01">cat01</p>
+      </div>
+      <p> テキストテキスト </p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+      <div>
+        <time datetime="2016-1-1">2016.01.01</time>
+        <p class="cat02">cat02</p>
+      </div>
+      <p> テキストテキストテキストテキスト </p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+      <div>
+        <time datetime="2016-1-1">2016.01.01</time>
+        <p class="cat01">cat01</p>
+      </div>
+      <p> テキストテキスト </p>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+      <div>
+        <time datetime="2016-1-1">2016.01.01</time>
+        <p class="cat02">cat02</p>
+      </div>
+      <p> テキストテキスト </p>
+      </a>
+    </li>
+  </ul>
+
+
+<script type="text/javascript">
+//current position
+var pos = 0;
+//number of slides
+var totalSlides = $('#slider-wrap ul li').length;
+//get the slide width
+var sliderWidth = $('#slider-wrap').width();
+
+
+$(document).ready(function(){
+    
+    
+    /*****************
+     BUILD THE SLIDER
+    *****************/
+    //set width to be 'x' times the number of slides
+    $('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
+    
+    //next slide    
+    $('#next').click(function(){
+        slideRight();
+    });
+    
+    //previous slide
+    $('#previous').click(function(){
+        slideLeft();
+    });
+    
+    
+    
+    /*************************
+     //*> OPTIONAL SETTINGS
+    ************************/
+    //automatic slider
+    var autoSlider = setInterval(slideRight, 3000);
+    
+    //for each slide 
+    $.each($('#slider-wrap ul li'), function() { 
+       //set its color
+       var c = $(this).attr("data-color");
+       $(this).css("background",c);
+       
+       //create a pagination
+       var li = document.createElement('li');
+       $('#pagination-wrap ul').append(li);    
+    });
+    
+    //counter
+    countSlides();
+    
+    //pagination
+    pagination();
+    
+    //hide/show controls/btns when hover
+    //pause automatic slide when hover
+    $('#slider-wrap').hover(
+      function(){ $(this).addClass('active'); clearInterval(autoSlider); }, 
+      function(){ $(this).removeClass('active'); autoSlider = setInterval(slideRight, 3000); }
+    );
+    
+    
+
+});//DOCUMENT READY
+    
+
+
+/***********
+ SLIDE LEFT
+************/
+function slideLeft(){
+    pos--;
+    if(pos==-1){ pos = totalSlides-1; }
+    $('#slider-wrap ul#slider').css('left', -(sliderWidth*pos));    
+    
+    //*> optional
+    countSlides();
+    pagination();
+}
+
+
+/************
+ SLIDE RIGHT
+*************/
+function slideRight(){
+    pos++;
+    if(pos==totalSlides){ pos = 0; }
+    $('#slider-wrap ul#slider').css('left', -(sliderWidth*pos)); 
+    
+    //*> optional 
+    countSlides();
+    pagination();
+}
+
+
+
+    
+/************************
+ //*> OPTIONAL SETTINGS
+************************/
+function countSlides(){
+    $('#counter').html(pos+1 + ' / ' + totalSlides);
+}
+
+function pagination(){
+    $('#pagination-wrap ul li').removeClass('active');
+    $('#pagination-wrap ul li:eq('+pos+')').addClass('active');
+}
+        
+  
+     
+       
+</script>
+</body>
+
+<footer>
+    
+</footer>
+</html>
