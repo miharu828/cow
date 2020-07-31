@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -11,9 +11,33 @@
 <body>
 
 
-<!-header-!>
 <header>
 　<div class="header-back"><img src="img/bokujo-header.png"></div>
+</header>
+
+
+<header id="top-head">
+  <div class="inner">
+      <div id="mobile-head">
+          <h1 class="logo">中央乳業</h1>
+          <div id="nav-toggle">
+              <div>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+      </div>
+      <nav id="global-nav">
+          <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">PRODUCT</a></li>
+              <li><a href="#">WORKS</a></li>
+              <li><a href="#">COMPANY</a></li>
+              <li><a href="#">CONTACT</a></li>
+          </ul>
+      </nav>
+  </div>
 </header>
 
 <nav>
@@ -27,13 +51,16 @@
     </nav>
 
 
-
-    <div class="milk">
-    <img src="img/milk.png">
     <div class="main-visual">
-        <img src="img/cowred.png">
-    </div>
+      <img src="img/cowred.png">  
+      <div class="milk">
+        <img src="img/milk.png">
+      </div>
+    
+
 </div>
+
+  
 
 <div class="middle-text">
 深いコクと口どけが魅力の無添加ソフト。<br>乳脂肪分の深い旨味と、<br>口の中にじんわり広がる優しい余韻を<br>楽しんでください。
@@ -170,7 +197,30 @@
       </a>
     </li>
   </ul>
-</body>
+
+
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+(function($) {
+    $(function() {
+        var $header = $('#top-head');
+        // Nav Fixed
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 350) {
+                $header.addClass('fixed');
+            } else {
+                $header.removeClass('fixed');
+            }
+        });
+        // Nav Toggle Button
+        $('#nav-toggle').click(function(){
+            $header.toggleClass('open');
+        });
+    });
+})(jQuery);
+</script>
 
 <script type="text/javascript">
 //current position
