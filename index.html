@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="phone.css" type="text/css" media="screen and (max-width: 768px)"> 
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    
@@ -12,49 +13,58 @@
 
 
 <header>
-　<div class="header-back"><img src="img/bokujo-header.png"></div>
+　<div class="header-back"><img src="https://miharu828.github.io/cow/img/bokujo-header.png"></div>
 </header>
-
 
 <header id="top-head">
-  <div class="inner">
-      <div id="mobile-head">
-          <h1 class="logo">中央乳業</h1>
-          <div id="nav-toggle">
-              <div>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-          </div>
-      </div>
-      <nav id="global-nav">
-          <ul>
-              <li><a href="#">HOME</a></li>
-              <li><a href="#">PRODUCT</a></li>
-              <li><a href="#">WORKS</a></li>
-              <li><a href="#">COMPANY</a></li>
-              <li><a href="#">CONTACT</a></li>
-          </ul>
-      </nav>
-  </div>
+    <div class="inner">
+        <div id="mobile-head">
+            <h1 class="logo"></h1>
+            <div id="nav-toggle">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <nav id="global-nav">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">WORKS</a></li>
+                <li><a href="#">COMPANY</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<nav>
-    <ul>
-    <li><a class=”current” href=”#”>Home</a></li>
-    <li><a href=”#”>News</a></li>
-    <li><a href=”#”>About</a></li>
-    <li><a href=”#”>Access</a></li>
-    <li><a href=”#”>Blog</a></li>
-    </ul>
+
+<div class="menuu">
+    <nav id="global-nav1">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">WORKS</a></li>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
     </nav>
+</div>
+
+
+　　<div class="phone-main">
+            
+            <img src="https://miharu828.github.io/cow/img/cowred.png"> 
+    </div>
 
 
     <div class="main-visual">
       <img src="https://miharu828.github.io/cow/img/cowred.png">  
       <div class="milk">
-        <img src="https://miharu828.github.io/cow/img/milk.png">
+        <img src="img/milk.png">
       </div>
     
 
@@ -63,6 +73,7 @@
   
 
 <div class="middle-text">
+<span id="big-title">中央牛乳</span>
 深いコクと口どけが魅力の無添加ソフト。<br>乳脂肪分の深い旨味と、<br>口の中にじんわり広がる優しい余韻を<br>楽しんでください。
 </div>
 
@@ -82,15 +93,15 @@
         
       <div id="slider-wrap">
           <ul id="slider">
-             <li data-color="#1abc9c">
+             <li data-color="#white">
                 <div>
                     <h3>会津のべこの乳</h3><!--stuffname-->
                     <span>180円</span><!--price-->
                 </div>                
-                <i class="image"><img src="https://miharu828.github.io/cow/img/bekonotiti.png"></i>
+                <i class="image"><img src="https://miharu828.github.io/cow/img/gyunyu.png"></i>
              </li>
              
-             <li data-color="#3498db">
+             <li data-color="white">
                 <div>
                     <h3>もうひと絞り</h3>
                     <span>200円</span>
@@ -98,7 +109,7 @@
                 <i class="image"><img src="https://miharu828.github.io/cow/img/purin.png"></i>
              </li>
              
-             <li data-color="#9b59b6">
+             <li data-color="#white">
                 <div>
                     <h3>つまんで良いチーズ</h3>
                     <span>250円</span>
@@ -106,20 +117,20 @@
                 <i class="image"><img src="https://miharu828.github.io/cow/img/pan.png"></i>
              </li>
              
-             <li data-color="#34495e">
+             <li data-color="white">
                 <div>
                     <h3>会津の雪</h3>
                     <span>220円</span>
                 </div>
-                <i class="image"><img src="https://miharu828.github.io/cow/img/aizunoyuki.png"></i>
+                <i class="image"><img src="https://miharu828.github.io/cow/img/yuguru.png"></i>
              </li>
              
-             <li data-color="#e74c3c">
+             <li data-color="white">
                 <div>
                     <h3>ソフトクリーミィヨーグルト</h3>
                     <span>130円</span>
                 </div>
-                <i class="image"><img src="https://miharu828.github.io/cow/img/img/ichigo.png"></i>
+                <i class="image"><img src="https://miharu828.github.io/cow/img/itigon.png"></i>
              </li>
              
              
@@ -199,28 +210,29 @@
   </ul>
 
 
-
-
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script>
-(function($) {
-    $(function() {
-        var $header = $('#top-head');
-        // Nav Fixed
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 350) {
-                $header.addClass('fixed');
-            } else {
-                $header.removeClass('fixed');
-            }
-        });
-        // Nav Toggle Button
-        $('#nav-toggle').click(function(){
-            $header.toggleClass('open');
-        });
-    });
-})(jQuery);
-</script>
+  <script>
+  (function($) {
+      $(function() {
+          var $header = $('#top-head');
+          // Nav Fixed
+          $(window).scroll(function() {
+              if ($(window).scrollTop() > 350) {
+                  $header.addClass('fixed');
+              } else {
+                  $header.removeClass('fixed');
+              }
+          });
+          // Nav Toggle Button
+          $('#nav-toggle').click(function(){
+              $header.toggleClass('open');
+          });
+      });
+  })(jQuery);
+  </script>
+
+ 
+
 
 <script type="text/javascript">
 //current position
