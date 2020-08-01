@@ -1,6 +1,17 @@
 body{background-image: url("img/usigara.gif");}
     
-    
+    .middle-text{
+     font-family: "Noto Serif JP";
+     font-size:18px;
+     text-align: center;
+     color:red;
+     margin-top:70px;
+     line-height: 33px;
+     letter-spacing: 1.1px;
+     padding-left: 20px;
+        font-weight:bold;
+ }
+
     #top-head,
     .inner {
         width: 100%;
