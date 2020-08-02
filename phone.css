@@ -1,16 +1,20 @@
 body{background-image: url("img/usigara.gif");}
     
-    .middle-text{
-     font-family: "Noto Serif JP";
-     font-size:18px;
-     text-align: center;
-     color:red;
-     margin-top:70px;
-     line-height: 33px;
-     letter-spacing: 1.1px;
-     padding-left: 20px;
-        font-weight:bold;
- }
+.middle-text {
+    background-color:white;
+    font-family: "Noto Serif JP";
+    font-size: 17px;
+    text-align: center;
+    color: red;
+    margin-top: -33vh;
+    line-height: 33px;
+    letter-spacing: 1.1px;
+    padding-left: 2vw;
+    font-weight: bold;
+padding-top:45vh;
+pading-bottom:15vh;
+width:100vw;
+}
 
     #top-head,
     .inner {
@@ -164,13 +168,15 @@ body{background-image: url("img/usigara.gif");}
         width:90%;
     }
 
-   .msr_newslist01 {
-        border-top: 1px solid red;
-        width: 90%;
-        text-align: center;
-        margin-left: 4%;
-        margin-bottom: 50px;
-    }
+.msr_newslist01 {
+    background-color: white;
+    border-top: 1px solid red;
+    width: 90%;
+    text-align: center;
+    margin-left: 4%;
+    margin-bottom: 50px;
+}
+
 
     #pagination-wrap ul li{
         margin: 0 4px;
@@ -194,3 +200,7 @@ body{background-image: url("img/usigara.gif");}
         vertical-align: middle;
         color:red;
     }
+.phone-main img{width:100vw;}
+
+#wrapper{
+margin:0 auto;}
