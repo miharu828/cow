@@ -1,24 +1,6 @@
-body{background-image: url("img/usigara.gif");
-font-family: 'Noto Serif JP', serif;
-overflow: hidden}
-    
-.middle-text {
-    background-color: white;
-    font-family: "Noto Serif JP";
-    font-size: 4vw;
-    text-align: center;
-    color: red;
-    margin-top: -28vh;
-    line-height: 33px;
-    letter-spacing: 1.1px;
-    padding-left: 2vw;
-    font-weight: bold;
-    padding-top: 33vh;
-    padding-bottom: 12vh;
-    pading-bottom: 38vh;
-    width: 100vw;
-}
 
+    
+    
     #top-head,
     .inner {
         width: 100%;
@@ -49,17 +31,18 @@ overflow: hidden}
         color: #333;
         font-size: 26px;
     }
-#global-nav {
-    position: absolute;
-    top: -500px;
-    background: white;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    -webkit-transition: .5s ease-in-out;
-    -moz-transition: .5s ease-in-out;
-    transition: .5s ease-in-out;
-}
+    #global-nav {
+        position: absolute;
+        /* 開いてないときは画面外に配置 */
+        top: -500px;
+        background: #333;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+    }
     #global-nav ul {
         list-style: none;
         position: static;
@@ -134,14 +117,11 @@ overflow: hidden}
 #big-title {
     color: red;
     display: flex;
-    font-size: 9vw;
+    font-size: 2em;
     /* text-align: center; */
-    margin-bottom: 11vh;
-    margin-top: 10vh;
-    /* text-align: center; */
-    margin-left: 29vw;
-}
-
+    margin-left: 3em;
+    margin-bottom: 3vh;
+    margin-top: -1em;}
 
 
     #slider-wrap ul#slider li i{
@@ -173,15 +153,15 @@ overflow: hidden}
         width:90%;
     }
 
-.msr_newslist01 {
-    background-color: white;
-    border-top: 1px solid red;
-    width: 90%;
-    text-align: center;
-    margin-left: 4%;
-    margin-bottom: 50px;
-}
-
+   .msr_newslist01 {
+        border-top: 1px solid red;
+        width: 90%;
+        text-align: center;
+        margin-left: 4%;
+        margin-bottom: 50px;
+        background-color: white;
+        padding:2%;
+    }
 
     #pagination-wrap ul li{
         margin: 0 4px;
@@ -206,26 +186,8 @@ overflow: hidden}
         color:red;
     }
 
-.phone-main {
-    margin-top: -12vh;
-    width: 100vw;
-    display: flex;
-    background-color: white;
-    padding-top: 8vh;
-    /* height: 58vh; */
-}
-phone-main img {
-    width: 70vw;
-    text-align: center;
-    margin-left: 12vw;
-}
-
-#wrapper{
-margin:0 auto;}
-
-
-.vo7 img {
-    width: 100vw;
-    margin-left: 1vw;
-}
-
+    body{
+        font-family: 'Noto Serif JP', serif;
+        margin: 0 0;
+    }
+    
